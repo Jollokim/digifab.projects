@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>myFlask</title>
+    </head>
+    <body>
+        <h1>Welcome to index</h1>
+        <form action="/login" method="post">
+          <label for="username">User name:</label><br>
+            {% if username %}
+                <input type="text" id="username" name="username" value="{{ username }}"><br>
+            {% else %}
+                <input type="text" id="username" name="username"><br>
+            {% endif %}
+          <label for="password">Password:</label><br>
+          <input type="password" id="password" name="password"><br><br>
+          <input type="submit" value="Submit">
+        </form>
+        {% if response %}
+          <p>{{ response }}!</p>
+        {% endif %}
+    </body>
+</html>

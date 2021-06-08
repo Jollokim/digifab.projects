@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+img {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+
+}
+
+#headline{
+    color: white;
+}
+
+#movementControls{
+    text-align:center;
+    width:320px;
+    border-style: solid;
+}
+
+#otherControls{
+    text-align: left;
+    border-style: solid;
+    width:320px;
+
+}
+

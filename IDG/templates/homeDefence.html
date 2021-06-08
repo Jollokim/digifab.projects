@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="static/homeDefenceStyle.css"/>
+</head>
+<body>
+     <h1 id="headline">Home defence</h1>
+     <img src="{{ url_for("getVideoFeed") }}">
+
+     <div id="movementControls">
+          <button id="up">UP</button><br><br>
+          <button id="left">LEFT</button>
+          <button id="right">RIGHT</button><br><br>
+          <button id="down">DOWN</button>
+    </div>
+     <div id="otherControls">
+         <button>Button</button>
+         <button>Button</button>
+         <button>Button</button>
+         <button>Button</button>
+     </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+
+          //json - parse to Python - left
+          $('button#up').bind('click', function() {
+            $.getJSON('/moveup',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+
+          // - Motor - center
+          $('button#left').bind('click', function() {
+            $.getJSON('/moveleft',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+
+        // - Motor - right
+        $('button#right').bind('click', function() {
+            $.getJSON('/moveright',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+
+        $('button#down').bind('click', function() {
+            $.getJSON('/movedown',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+
+
+        });
+</script>
+</body>
+</html>
